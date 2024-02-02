@@ -1,0 +1,234 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  overflow: hidden;
+}
+
+header {
+  background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   margin-bottom: 10px;
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  border: solid 2px white;
+  border-radius: 20px;
+  font-size: 21px;
+}
+
+a:hover{
+  transition: 0.9s;
+  background-color: whitesmoke;
+  color: black;
+ 
+}
+
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.dropdown a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.dropdown a:hover {
+  background-color: #0056b3;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.timer-container {
+  text-align: center;
+   margin-bottom: 250px; /* Adjust the margin as needed */
+}
+
+.timer {
+  font-size: 8em;
+  color: #007bff;
+  width: 300px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+input, button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 1.4em;
+  border-radius: 15px;
+  padding: 16px;
+  width: 170px;
+  font-family: cursive;
+  color: black;
+  font-weight: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .timer {
+    font-size: 6em;
+    width: 80%;
+  }
+}
+
+.text{
+  font-family: cursive;
+  font-size: 41px;
+  color: whitesmoke;
+}
+
+
+/* Your existing CSS code */
+
+/* Additional styles for Motivation Quotes */
+/*.motivation-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.motivation-quotes {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.close {
+  color: #007bff;
+  font-size: 20px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: darkblue;
+}*/
+
+.motivation-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.motivation-quotes p {
+  font-size: 41px; /* Increase the font size to your desired value */
+  margin-bottom: 10px;
+}
+
+.close {
+  color: #007bff;
+  font-size: 20px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: darkblue;
+}
+
+/* Add these styles for Stickers */
+.stickers-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.stickers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  gap: 10px;
+}
+
+.sticker {
+  max-width: 400px; /* Adjust the size as needed */
+  max-height: 300px;
+  border-radius: 5px;
+  cursor: pointer;
+}

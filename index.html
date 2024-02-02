@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study with Me</title>
+  <link rel="stylesheet" href="Study.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <p class="text"> STUDY WITH ME.io </p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Select Themes</a>
+          <ul class="dropdown">
+            <li><a href="#">IIT / JEE Theme Wall-Papers</a></li>
+            <li><a href="#">NEET Theme Wall-Papers</a></li>
+            <li><a href="#">10th : 12th Board Theme Wall papers</a></li>
+          </ul>
+        </li>
+        <li><a href="#" onclick="showMotivation()">Motivation Quotes</a></li>
+        <li><a href="#" onclick="showStickers()">Motivational Stickers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="root">
+    <div class="timer-container">
+      <img src="https://cdn-icons-png.flaticon.com/256/7591/7591563.png" width="120px">
+    <strong>  <div class="timer" id="timerDisplay">00:00:00</div> </strong>
+      <div>
+        <input type="number" id="hoursInput" placeholder="Hours" />
+        <input type="number" id="minutesInput" placeholder="Minutes" />
+      </div>
+      <div>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+        <button onclick="restartTimer()">Restart</button>
+      </div>
+      <div>
+        <button onclick="startPomodoro()">Pomodoro</button>
+        <button onclick="startShortBreak()">Short Break</button>
+        <button onclick="startLongBreak()">Long Break</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Motivation Quotes Container -->
+  <div id="motivationContainer" class="motivation-container">
+    <div class="motivation-content">
+      <span class="close" onclick="hideMotivation()">&times;</span>
+      <div id="motivationQuotes"></div>
+    </div>
+  </div>
+
+  <!-- Add the following code inside the body tag, after the timer container -->
+<div id="motivationContainer" class="motivation-container">
+  <span id="closeMotivation" onclick="hideMotivation()">X</span>
+  <div id="motivationQuotes" class="motivation-quotes"></div>
+</div>
+
+ 
+<div id="stickersContainer" class="stickers-container">
+  <span class="close" onclick="hideStickers()">&times;</span>
+  <div id="stickers" class="stickers"></div>
+</div>
+ 
+ 
+  
+ 
+  <script src="Study.js"></script>
+</body>
+</html>
